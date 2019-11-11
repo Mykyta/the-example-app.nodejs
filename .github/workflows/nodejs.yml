@@ -1,8 +1,6 @@
 name: Node.js with NVS
 
 on: [push]
-  branches:
-    - master
 
 jobs:
   build:
