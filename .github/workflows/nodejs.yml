@@ -1,0 +1,23 @@
+name: Node.js with NVS
+
+on: [push]
+  branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - name: Build with npm
+      run: npm ci
+    - name: Nexus Vulnerability Scanner
+      uses: sonatype/nvs-github-action@releases/v1.0.0
+      with:
+        email: mshevelov@sonatype.com
+        password: admin123
+        directory: ./
