@@ -14,7 +14,7 @@ jobs:
     - name: Build with npm
       run: npm ci
     - name: Nexus Vulnerability Scanner
-      uses: sonatype/nvs-github-action@develop-with-node-modules
+      uses: sonatype/nvs-github-action@releases/v1.0.0
       with:
         email: mshevelov+13@sonatype.com
         password: admin123
