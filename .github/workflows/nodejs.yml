@@ -17,5 +17,5 @@ jobs:
       uses: sonatype/nvs-github-action@develop-with-node-modules
       with:
         email: mshevelov+13@sonatype.com
-        password: pass
+        password: admin
         directory: ./
